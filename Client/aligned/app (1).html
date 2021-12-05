@@ -1,0 +1,180 @@
+ <!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Banglore Home Price Prediction</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script src="app.js"></script>
+
+    <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="img"></div>
+
+    <form class="form">
+
+        <h2>Area (Square Feet)</h2>
+
+        <input class="area" type="email" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+
+    </form>
+   <div class="container">
+        <div class="row">
+         <div class="col-md-4 text-center">
+         <h2>BHK</h2>
+        <div class="switch-field text-center">
+
+            <input type="radio" id="radio-bhk-1" name="uiBHK" value="1" />
+
+            <label for="radio-bhk-1">1</label>
+
+            <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked />
+
+            <label for="radio-bhk-2">2</label>
+
+            <input type="radio" id="radio-bhk-3" name="uiBHK" value="3" />
+
+            <label for="radio-bhk-3">3</label>
+
+            <input type="radio" id="radio-bhk-4" name="uiBHK" value="4" />
+
+            <label for="radio-bhk-4">4</label>
+
+            <input type="radio" id="radio-bhk-5" name="uiBHK" value="5" />
+
+            <label for="radio-bhk-5">5</label>
+
+        </div>
+    </div>
+     <div class="col-md-4">
+        <h2>Bath</h2>
+
+            <div class="switch-field">
+    
+                <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1" />
+    
+                <label for="radio-bath-1">1</label>
+    
+                <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked />
+    
+                <label for="radio-bath-2">2</label>
+    
+                <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3" />
+    
+                <label for="radio-bath-3">3</label>
+    
+                <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4" />
+    
+                <label for="radio-bath-4">4</label>
+    
+                <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5" />
+    
+                <label for="radio-bath-5">5</label>
+    
+            </div>
+     </div>
+
+     
+     <div class="col-md-4">
+        <h2>Balcony</h2>
+    
+        <div class="switch-field">
+
+            <input type="radio" id="radio-balcony-1" name="uiBalcony" value="1" />
+
+            <label for="radio-balcony-1">1</label>
+
+            <input type="radio" id="radio-balcony-2" name="uiBalcony" value="2" checked />
+
+            <label for="radio-balcony-2">2</label>
+
+            <input type="radio" id="radio-balcony-3" name="uiBalcony" value="3" />
+
+            <label for="radio-balcony-3">3</label>
+        </div>
+     </div>
+     <div class="container">
+         <div class="row">
+             <div class="col-md-6">
+                <h2>Location</h2>
+
+                <div>
+        
+                    <select class="location" name="" id="uiLocations">
+        
+                        <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+        
+                        <option>Electronic City</option>
+        
+                        <option>Rajaji Nagar</option>
+        
+                    </select>
+        
+                </div>
+             </div>
+             <div class="col-md-6">
+                <h2>Area-Type</h2>
+
+           
+        
+                    <select class="Area-Type" name="" id="uiArea-Type">
+        
+                        <option value="" disabled="disabled" selected="selected">Choose a Area-Type</option>
+        
+                        <option>Plot area</option>
+        
+                        <option>Super Built up area</option>
+        
+                    </select>
+        
+                
+             </div>
+         </div>
+         <div class="text-center">
+            <h2>Society</h2>
+    
+            <div>
+    
+                <select class="Society" name="" id="uiSociety">
+    
+                    <option value="" disabled="disabled" selected="selected">Choose a Society</option>
+    
+                    <option>jaades</option>
+    
+                    <option>Skityer</option>
+    
+                </select>
+    
+            </div>
+            <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+    
+            <div id="uiEstimatedPrice" class="result">
+                <h2></h2>
+            </div>
+          </div>
+            
+           
+       
+     </div>
+
+
+
+           
+
+       
+
+      
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
